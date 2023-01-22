@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
+import { ApiService } from '../service/api.service';
 
 @NgModule({
   imports: [
@@ -14,6 +15,11 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+
+  //importation de tous les service qui seront utiliser dans home
+  
+  providers:[ApiService]
+  
 })
 export class HomePageModule {}
